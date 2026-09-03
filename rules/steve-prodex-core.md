@@ -44,3 +44,9 @@ Whenever diagnosing an error, test failure, or unexpected behavior:
 ## 5. Product & Copywriting
 - When drafting landing page text or marketing headlines, automatically apply `landing-page-copywriter` (PAS/AIDA frameworks, punchy value propositions).
 - When planning major features or systems, automatically apply `brainstorming` and `prd` standards.
+
+## 6. Video, Motion Graphics & Rendered Animations (Automatic HyperFrames)
+Whenever the user asks to create, animate, edit, or render video, motion graphics, explainer clips, captions, or HTML-based animated compositions:
+- Automatically apply `hyperframes`, `hyperframes-core`, `hyperframes-cli`, and `hyperframes-animation`.
+- Follow the HyperFrames composition contract: declare DOM timing using `data-*` attributes and `class="clip"`, seekable animation runtimes, and framework-owned media playback.
+

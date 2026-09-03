@@ -4,17 +4,18 @@ A comprehensive, production-grade developer experience and design engineering pl
 
 ## Overview
 
-`steve-prodex` packages **29 deduplicated, battle-tested skills** into a single cohesive unit. It spans the entire development lifecycle:
+`steve-prodex` packages **33 deduplicated, battle-tested skills** into a single cohesive unit. It spans the entire development lifecycle:
 - **Product & Clarification**: Socratic brainstorming, PRDs, conversion copywriting.
 - **Frontend Taste & Polish**: Awwwards-level GSAP layouts, 20-dimension UI polish, optical alignment, and concentric radii.
 - **Micro-interactions & Motion**: React view transitions, interruptible spring physics, stagger animations.
+- **Video & Motion Graphics (HyperFrames)**: Video generation from HTML compositions, DOM-declared timing, seekable animation runtimes.
 - **Code Minimalism (Ponytail)**: Senior-dev YAGNI discipline, native platform features before dependencies, and shortest working diffs.
 - **Architecture & Fullstack**: Scalable React composition, Convex, Supabase/PostgreSQL optimization, Vercel deployments.
 - **Quality & Workflows**: Systematic debugging, dead-code cleanup, structured code reviews.
 
 ---
 
-## Included Skills (29 Total)
+## Included Skills (33 Total)
 
 | Skill | Category | Description |
 | :--- | :--- | :--- |
@@ -27,6 +28,10 @@ A comprehensive, production-grade developer experience and design engineering pl
 | `frontend-design` | Frontend | Anthropic's high-quality frontend design guidelines |
 | `frontend-skill` | Frontend | Robust modern UI structure for landing pages and apps |
 | `gpt-tasteskill` | Design / Motion | Elite GSAP motion, gapless bento grids, and typography |
+| `hyperframes` | Video & Motion | HeyGen's video and motion graphics rendering from HTML |
+| `hyperframes-animation` | Video & Motion | GSAP, CSS, and Lottie animation runtime adapters for HyperFrames |
+| `hyperframes-cli` | Video & Motion | HyperFrames CLI tooling, previewing, and batch-rendering |
+| `hyperframes-core` | Video & Motion | HyperFrames technical authoring contract & DOM timing |
 | `impeccable` | UI Polish | Paul Bakaus's 20-dimension design critique and polish suite |
 | `improve-animations` | Motion | Emil Kowalski's spring tuning, interrupts, and gesture physics |
 | `landing-page-copywriter` | Product | Conversion-focused value props and landing page copy |
@@ -53,7 +58,7 @@ A comprehensive, production-grade developer experience and design engineering pl
 ## How to Reuse Across Projects
 
 ### Option 1: Native In-Project Plugin (Already Active Here)
-When placed in `.agents/plugins/steve-prodex/`, the agent automatically discovers and activates all 29 skills.
+When placed in `.agents/plugins/steve-prodex/`, the agent automatically discovers and activates all 33 skills.
 
 ### Option 2: Shared Local Path
 If you want to keep one copy on your machine and reference it in other projects:
@@ -68,18 +73,7 @@ If you want to keep one copy on your machine and reference it in other projects:
    ```
 
 ### Option 3: Separate GitHub Repository (For Teams / Multi-Device)
-To share with teammates or use across devices:
-1. Open terminal in `.agents/plugins/steve-prodex/`
-2. Run:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: initial release of steve-prodex plugin"
-   git remote add origin https://github.com/<your-username>/steve-prodex.git
-   git branch -M main
-   git push -u origin main
-   ```
-3. In any other project, simply add it as a Git submodule:
-   ```bash
-   git submodule add https://github.com/<your-username>/steve-prodex.git .agents/plugins/steve-prodex
-   ```
+In any other project, simply add it as a Git submodule:
+```bash
+git submodule add https://github.com/steven-codex/steve-prodex.git .agents/plugins/steve-prodex
+```
