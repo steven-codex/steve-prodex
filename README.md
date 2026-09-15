@@ -4,18 +4,18 @@ A comprehensive, production-grade developer experience and design engineering pl
 
 ## Overview
 
-`steve-prodex` packages **33 deduplicated, battle-tested skills** into a single cohesive unit. It spans the entire development lifecycle:
+`steve-prodex` packages **34 deduplicated, battle-tested skills** into a single cohesive unit. It spans the entire development lifecycle:
 - **Product & Clarification**: Socratic brainstorming, PRDs, conversion copywriting.
 - **Frontend Taste & Polish**: Awwwards-level GSAP layouts, 20-dimension UI polish, optical alignment, and concentric radii.
 - **Micro-interactions & Motion**: React view transitions, interruptible spring physics, stagger animations.
-- **Video & Motion Graphics (HyperFrames)**: Video generation from HTML compositions, DOM-declared timing, seekable animation runtimes.
+- **Video & Motion Graphics (HyperFrames & MotionFields)**: Video generation from HTML compositions, DOM-declared timing, seekable animation runtimes, and cinematic motion direction.
 - **Code Minimalism (Ponytail)**: Senior-dev YAGNI discipline, native platform features before dependencies, and shortest working diffs.
 - **Architecture & Fullstack**: Scalable React composition, Convex, Supabase/PostgreSQL optimization, Vercel deployments.
 - **Quality & Workflows**: Systematic debugging, dead-code cleanup, structured code reviews.
 
 ---
 
-## Included Skills (33 Total)
+## Included Skills (34 Total)
 
 | Skill | Category | Description |
 | :--- | :--- | :--- |
@@ -36,6 +36,7 @@ A comprehensive, production-grade developer experience and design engineering pl
 | `improve-animations` | Motion | Emil Kowalski's spring tuning, interrupts, and gesture physics |
 | `landing-page-copywriter` | Product | Conversion-focused value props and landing page copy |
 | `make-interfaces-feel-better` | UI Polish | Emil Kowalski's 16 core principles (optical alignment, concentric radius) |
+| `motionfields` | Video & Motion | Creative direction and execution orchestration for premium product motion and coded films |
 | `pdf` | Utility | PDF reading, rendering, generation, and inspection |
 | `ponytail` | Architecture | Dietrich Gebert's anti-overengineering and YAGNI minimal code discipline |
 | `prd` | Product | Product Requirement Documents, user stories, and specs |
