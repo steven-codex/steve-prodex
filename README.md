@@ -4,7 +4,7 @@ A comprehensive, production-grade developer experience and design engineering pl
 
 ## Overview
 
-`steve-prodex` packages **34 deduplicated, battle-tested skills** into a single cohesive unit. It spans the entire development lifecycle:
+`steve-prodex` packages **76 deduplicated skills** into a single cohesive unit. It spans the entire development lifecycle:
 - **Product & Clarification**: Socratic brainstorming, PRDs, conversion copywriting.
 - **Frontend Taste & Polish**: Awwwards-level GSAP layouts, 20-dimension UI polish, optical alignment, and concentric radii.
 - **Micro-interactions & Motion**: React view transitions, interruptible spring physics, stagger animations.
@@ -15,11 +15,12 @@ A comprehensive, production-grade developer experience and design engineering pl
 
 ---
 
-## Included Skills (34 Total)
+## Included Skills (76 Total)
 
 | Skill | Category | Description |
 | :--- | :--- | :--- |
 | `agent-browser` | Automation | Browser automation and web interaction workflows |
+| `antislop` | UI Quality | Rules against generic AI-generated UI, copy, and code |
 | `brainstorming` | Product | Socratic questioning, idea shaping, and requirement clarification |
 | `clone-website` | Frontend | Website reverse-engineering and visual layout cloning |
 | `composition-patterns` | Frontend | Scalable React component composition architectures |
@@ -53,6 +54,21 @@ A comprehensive, production-grade developer experience and design engineering pl
 | `systematic-debugging` | Debugging | Root-cause analysis and structured troubleshooting |
 | `ui-ux-pro-max` | UI / UX | Comprehensive UI/UX design systems and patterns |
 | `web-design-guidelines` | Accessibility | WCAG accessibility, contrast checks, and UI audits |
+
+### Additional Skills (41)
+
+| Source | Skills |
+| :--- | :--- |
+| Addy Osmani | `api-and-interface-design`, `browser-testing-with-devtools`, `ci-cd-and-automation`, `code-review-and-quality`, `code-simplification`, `constraint-driven-development`, `context-engineering`, `debugging-and-error-recovery`, `deprecation-and-migration`, `documentation-and-adrs`, `doubt-driven-development`, `frontend-ui-engineering`, `git-workflow-and-versioning`, `idea-refine`, `incremental-implementation`, `interview-me`, `observability-and-instrumentation`, `performance-optimization`, `planning-and-task-breakdown`, `security-and-hardening`, `shipping-and-launch`, `source-driven-development`, `spec-driven-development`, `test-driven-development`, `using-agent-skills` |
+| Strix | `api-security-testing`, `application-security-testing`, `ci-security-scanning-with-strix`, `find-security-vulnerabilities-in-code`, `fix-security-vulnerabilities-with-strix`, `managed-pentesting-with-strix`, `owasp-top-10-testing`, `penetration-testing-with-strix`, `web-app-penetration-testing` |
+| Graphify Labs | `graphify` |
+| 21st.dev | `21st-ui` |
+| Andrej Karpathy Skills | `karpathy-guidelines` |
+| Emil Kowalski | `emil-design-eng` |
+| Taste Skill | `design-taste-frontend` |
+| transitions.dev | `transitions-dev`, `transitions-polish` |
+
+Skill source and version metadata is recorded in [`skills-lock.json`](skills-lock.json).
 
 ---
 
