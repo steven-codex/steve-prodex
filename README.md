@@ -4,7 +4,7 @@ A comprehensive, production-grade developer experience and design engineering pl
 
 ## Overview
 
-`steve-prodex` packages **76 deduplicated skills** into a single cohesive unit. It spans the entire development lifecycle:
+`steve-prodex` packages **90 deduplicated skills** into a single cohesive unit. It spans the entire development lifecycle:
 - **Product & Clarification**: Socratic brainstorming, PRDs, conversion copywriting.
 - **Frontend Taste & Polish**: Awwwards-level GSAP layouts, 20-dimension UI polish, optical alignment, and concentric radii.
 - **Micro-interactions & Motion**: React view transitions, interruptible spring physics, stagger animations.
@@ -15,7 +15,7 @@ A comprehensive, production-grade developer experience and design engineering pl
 
 ---
 
-## Included Skills (76 Total)
+## Included Skills (90 Total)
 
 | Skill | Category | Description |
 | :--- | :--- | :--- |
@@ -67,6 +67,7 @@ A comprehensive, production-grade developer experience and design engineering pl
 | Emil Kowalski | `emil-design-eng` |
 | Taste Skill | `design-taste-frontend` |
 | transitions.dev | `transitions-dev`, `transitions-polish` |
+| Jakub Krehel | `better-accessibility`, `better-colors`, `better-interface`, `better-layout`, `better-typography`, `better-ui`, `better-writing`, `break`, `build-design`, `explain-interface`, `interface-review`, `state-machine`, `technical-drawing`, `variant` |
 
 Skill source and version metadata is recorded in [`skills-lock.json`](skills-lock.json).
 
@@ -75,7 +76,7 @@ Skill source and version metadata is recorded in [`skills-lock.json`](skills-loc
 ## How to Reuse Across Projects
 
 ### Option 1: Native In-Project Plugin (Already Active Here)
-When placed in `.agents/plugins/steve-prodex/`, the agent automatically discovers and activates all 33 skills.
+When placed in `.agents/plugins/steve-prodex/`, the agent automatically discovers and activates all 90 skills.
 
 ### Option 2: Shared Local Path
 If you want to keep one copy on your machine and reference it in other projects:
