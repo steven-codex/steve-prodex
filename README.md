@@ -1,10 +1,10 @@
 # Steve ProDex (`steve-prodex`)
 
-A comprehensive, production-grade developer experience and design engineering plugin for AI coding agents (Google Antigravity, Gemini IDE, Cursor, Claude Code, etc.).
+A comprehensive, production-grade developer experience and design engineering plugin for AI coding agents. One install wires it into **Claude Code** and **Google Antigravity** at the same time (macOS / Linux).
 
 ## Overview
 
-`steve-prodex` packages **90 deduplicated skills** into a single cohesive unit. It spans the entire development lifecycle:
+`steve-prodex` packages **92 deduplicated skills** and **282 specialist agents** (from [The Agency](https://github.com/msitarzewski/agency-agents)) into a single cohesive unit, with automatic model routing. It spans the entire development lifecycle:
 - **Product & Clarification**: Socratic brainstorming, PRDs, conversion copywriting.
 - **Frontend Taste & Polish**: Awwwards-level GSAP layouts, 20-dimension UI polish, optical alignment, and concentric radii.
 - **Micro-interactions & Motion**: React view transitions, interruptible spring physics, stagger animations.
@@ -15,7 +15,7 @@ A comprehensive, production-grade developer experience and design engineering pl
 
 ---
 
-## Included Skills (90 Total)
+## Included Skills (92 Total)
 
 | Skill | Category | Description |
 | :--- | :--- | :--- |
@@ -55,7 +55,7 @@ A comprehensive, production-grade developer experience and design engineering pl
 | `ui-ux-pro-max` | UI / UX | Comprehensive UI/UX design systems and patterns |
 | `web-design-guidelines` | Accessibility | WCAG accessibility, contrast checks, and UI audits |
 
-### Additional Skills (41)
+### Additional Skills (43)
 
 | Source | Skills |
 | :--- | :--- |
@@ -67,31 +67,71 @@ A comprehensive, production-grade developer experience and design engineering pl
 | Emil Kowalski | `emil-design-eng` |
 | Taste Skill | `design-taste-frontend` |
 | transitions.dev | `transitions-dev`, `transitions-polish` |
+| Matt Pocock | `grill-me` (type `/grill-me`), `grilling` |
 | Jakub Krehel | `better-accessibility`, `better-colors`, `better-interface`, `better-layout`, `better-typography`, `better-ui`, `better-writing`, `break`, `build-design`, `explain-interface`, `interface-review`, `state-machine`, `technical-drawing`, `variant` |
 
 Skill source and version metadata is recorded in [`skills-lock.json`](skills-lock.json).
 
 ---
 
-## How to Reuse Across Projects
+## Specialist Agents (282)
 
-### Option 1: Native In-Project Plugin (Already Active Here)
-When placed in `.agents/plugins/steve-prodex/`, the agent automatically discovers and activates all 90 skills.
+Every agent from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) (MIT) lives in [`agents/`](agents), grouped by division: engineering, design, testing, security, product, project management, marketing, paid media, sales, support, finance, game development, spatial computing, GIS, academic, healthcare, research and specialized.
 
-### Option 2: Shared Local Path
-If you want to keep one copy on your machine and reference it in other projects:
-1. Move or copy `steve-prodex` to a central directory (e.g., `D:\agent-plugins\steve-prodex`).
-2. In any project, create `.agents/plugins.json`:
-   ```json
-   {
-     "entries": [
-       { "path": "D:/agent-plugins/steve-prodex" }
-     ]
-   }
-   ```
+Each one is a Claude Code subagent with its model already chosen, so the expensive model is only used where it pays off:
 
-### Option 3: Separate GitHub Repository (For Teams / Multi-Device)
-In any other project, simply add it as a Git submodule:
+| Where | Model | Used for |
+|---|---|---|
+| Main session | Opus, medium effort | Understanding the request, planning, choosing skills/agents, final check |
+| 🟦 `sonnet` agents (127) | Sonnet, medium effort | Implementation, debugging, review, testing, security, databases, UI build |
+| 🟩 `haiku` agents (155) | Haiku | Copy, marketing, sales, docs, research summaries, product/PM, business advice |
+
+If a Haiku agent's work fails verification, the router re-runs it once on Sonnet; if Sonnet also fails, the main Opus session finishes it. The full rules are in [`rules/steve-prodex-core.md`](rules/steve-prodex-core.md).
+
+In Antigravity (no subagents), the same specialists are installed as skills named `agency-<agent-name>`.
+
+To refresh agents from upstream: `python3 scripts/build-agents.py /path/to/agency-agents`. Model assignments live at the top of that script.
+
+---
+
+## Install (macOS / Linux)
+
+```bash
+git clone https://github.com/steven-codex/steve-prodex.git ~/steve-prodex
+cd ~/steve-prodex && ./install.sh
+```
+
+Then restart Claude Code and Antigravity. What the installer does:
+
+| Tool | Skills | Agents | Rules |
+|---|---|---|---|
+| Claude Code | linked into `~/.claude/skills/` | linked into `~/.claude/agents/steve-prodex/` | imported from `~/.claude/CLAUDE.md`; default model set to Opus, medium effort |
+| Antigravity | linked into `~/.gemini/config/skills/` | generated as `agency-*` skills | written into `~/.gemini/GEMINI.md` |
+
+Everything is symlinked to this folder, so it works in every project without re-reading the repo. Your own skills and notes are never overwritten; the rules go between `<!-- steve-prodex:start -->` markers.
+
+| Command | Does |
+|---|---|
+| `git pull && ./install.sh` | Update to the latest version |
+| `./install.sh --claude` / `--antigravity` | Install for one tool only |
+| `./install.sh --uninstall` | Remove everything the installer added |
+
+### Using it
+
+- Skills apply automatically when the task matches. Call one directly with `/name`, e.g. `/ponytail`, `/grill-me`, `/systematic-debugging`.
+- Ask for a specialist by role: "have the security appsec engineer review this", "use the marketing seo specialist".
+- Before building something new, start with `/grill-me` so the plan is settled before any code is written.
+
+### Per-project install (Antigravity, optional)
+
+Antigravity also discovers the plugin per project when it sits in `.agents/plugins/steve-prodex/`:
+
 ```bash
 git submodule add https://github.com/steven-codex/steve-prodex.git .agents/plugins/steve-prodex
 ```
+
+---
+
+## Credits
+
+Skills and agents come from their original authors, listed above and in [`skills-lock.json`](skills-lock.json). The Agency agents are MIT-licensed by Michael Sitarzewski and contributors; `grill-me`/`grilling` are MIT-licensed by Matt Pocock.
